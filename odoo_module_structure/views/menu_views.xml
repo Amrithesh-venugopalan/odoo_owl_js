@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="test_dashboard_action" model="ir.actions.client">
+       <field name="name">Test Dashboard</field>
+       <field name="tag">test_dashboard_tag</field>
+    </record>
+    <menuitem id="odoo_module_structure" name="Employee Level"/>
+    <menuitem id="test_test_menu" name="Test" parent="odoo_module_structure"
+              action="action_module_structure"/>
+    <menuitem name="Dashboard" id="test_dashboard" parent="odoo_module_structure"
+              action="test_dashboard_action"/>
+</odoo>
+
+
+
+
+

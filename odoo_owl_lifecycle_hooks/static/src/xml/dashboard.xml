@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="example.HooksExample">
+        <div class="hooks-example p-4">
+            <h2>Hooks Example</h2>
+
+            <div class="mb-4">
+                <p>Counter: <t t-esc="state.counter"/></p>
+                <p>Name: <t t-esc="state.name"/></p>
+                <p>Prop Value: <t t-esc="props.value"/></p>
+            </div>
+
+            <div class="buttons">
+                <button
+                        t-ref="incrementButton"
+                        class="btn btn-primary me-2"
+                        t-on-click="increment">
+                    Increment Counter
+                </button>
+                <button
+                        class="btn btn-secondary"
+                        t-on-click="updateName">
+                    Update Name
+                </button>
+            </div>
+        </div>
+    </t>
+    <t t-name="example.ParentComponent">
+                <button
+                        class="btn btn-secondary"
+                        t-on-click="counter_increase">
+                    Update props
+                </button>
+        <HooksDashboard
+                value="state.dashboardValue"
+                onValueChange="(val) => updateValue(val)"
+        />
+    </t>
+</templates>

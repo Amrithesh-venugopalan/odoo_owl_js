@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="test_dashboard_action" model="ir.actions.client">
+       <field name="name">Dashboard</field>
+       <field name="tag">hooks_tag</field>
+    </record>
+    <menuitem id="odoo_module_structure" name="Life cycle hooks test"/>
+    <menuitem name="Dashboard" id="test_dashboard" parent="odoo_module_structure"
+              action="test_dashboard_action"/>
+</odoo>
+
+
+
+
+

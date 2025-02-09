@@ -1,0 +1,8 @@
+default props are overwritten when new props are passed
+
+slots should be defined in props
+t-slot should be set as "default" in template
+t-slot-scope should be set as "scope" when props are passed in
+scope can be used to access the prop line in the child component
+
+t-slot and t-set-slot can also be used for condition based rendering

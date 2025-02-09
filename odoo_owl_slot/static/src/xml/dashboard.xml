@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- ListContainer template -->
+    <t t-name="example.ListContainer">
+        <div class="list-container">
+            <t t-foreach="props.items" t-as="item" t-key="item.id">
+                <t t-slot="default" item="item">
+                    <!-- Content from parent will be rendered here -->
+                </t>
+            </t>
+        </div>
+    </t>
+
+    <!-- ItemCard template -->
+    <t t-name="example.ItemCard">
+        <t t-log="defaultProps"/>
+        <div t-att-class="{...props.class}">
+            <h3><t t-esc="props.item.title"/></h3>
+            <p><t t-esc="props.item.description"/></p>
+        </div>
+        <t t-slot="top-line"/>
+    </t>
+
+    <!-- Usage example template -->
+    <t t-name="example.MainView">
+        <ListContainer items="state.items" t-slot-scope="scope">
+            <ItemCard
+                item="scope.item"
+                class="{'highlighted': true}"
+                t-on-click="() => this.selectItem(scope.item.id)"
+            >
+                <t t-set-slot="top-line">
+                    <t t-if="scope.item.id===1">
+                        <span>This is the top line</span>
+                    </t>
+                </t>
+            </ItemCard>
+        </ListContainer>
+    </t>
+</templates>

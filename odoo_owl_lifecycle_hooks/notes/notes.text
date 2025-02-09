@@ -1,0 +1,12 @@
+on will start rendered first
+on mounted is rendered after
+use effect will run one time even before dependency array changes
+
+on will patch work before any changes to DOM applied ( like state changes )
+on patched will work when the changes are applied to DOM
+
+on will unmount work before the component is removed from DOM
+on will destroy work just before component destruction
+
+on will update props work when the component's props are changed (props should not be changed internally by the
+component but by the parent)
