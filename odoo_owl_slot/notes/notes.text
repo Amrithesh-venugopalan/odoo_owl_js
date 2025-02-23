@@ -1,8 +1,7 @@
 default props are overwritten when new props are passed
 
-slots should be defined in props
-t-slot should be set as "default" in template
-t-slot-scope should be set as "scope" when props are passed in
-scope can be used to access the prop line in the child component
+two case were slots can be helpful:
 
-t-slot and t-set-slot can also be used for condition based rendering
+1. when we want to show something in the child component but don't know the content yet.it may be passed on from the parent component.
+   here we set a slot in the child component and pass the slot data from the parent component.
+2. when we want to loop through parent component's data and pass it to child component using scope.
