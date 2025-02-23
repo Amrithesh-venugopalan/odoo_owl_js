@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="odoo_owl_services.ServiceDashboard">
+        <div>
+            <p t-esc="state.message"/>
+            <button t-on-click="handleAction">Open Action</button>
+            <button t-on-click="handleDialog">Open Dialog</button>
+            <button t-on-click="handleRPC">Call RPC</button>
+            <button t-on-click="handleUserInfo">Show User Info</button>
+            <button t-on-click="triggerToChild">Send to Child</button>
+            <button t-on-click="confirmSaleOrder">Confirm Sale Order</button>
+        </div>
+        <ServiceDashboardChild/>
+    </t>
+</templates>

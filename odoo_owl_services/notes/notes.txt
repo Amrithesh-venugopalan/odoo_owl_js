@@ -1,0 +1,39 @@
+[SUMMARY]
+useService('action') used to execute different types of actions in Odoo
+
+-doAction : execute a type of action like window action ,url action etc
+    views - false mean default view for tree or form is used if we need to use custom view then we can
+            provide the custom id for that tree or form.
+    target - can be 'current' or 'new'
+    context - context for the action
+    res_id - record id to be considered
+    type - ir.actions.act_window,
+           ir.actions.act_url,
+           ir.actions.act_client,
+           ir.action.report,
+           ir.actions.act_window_close,
+
+-doActionButton : executes a button action for a record inside a model - Model and Id format diff here
+    name - name of the button function
+    type - object or action
+    resModel - model
+    resId - id of record
+
+-loadAction - load action definition without executing it
+-switchView - switch blw different views of the record (tree,form,kanban)
+-restore - restore the previous action by controller's jsId
+-currentController - access information about the current controller
+
+useService('dialog') - executes different dialog popups
+    type - ConfirmationDialog,AlertDialog etc..
+
+useService('notification') - executes a notification
+    type - include success,info,danger etc..
+
+useService("rpc") - executes an rpc call to a controller
+
+useService("user") - used to access current logged in user details
+
+useBus - used to send data blw parent and child component and blw non-related components from client side to client side
+bus - used to send data blw server to client side - when it need to be reflected in all opened tabs (explain in api_bus
+module)

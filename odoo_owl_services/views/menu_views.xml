@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="service_dashboard_action" model="ir.actions.client">
+       <field name="name">Dashboard</field>
+       <field name="tag">service_dashboard_tag</field>
+    </record>
+    <menuitem id="odoo_owl_services" name="Odoo Owl Services"/>
+    <menuitem name="Dashboard" id="service_dashboard" parent="odoo_owl_services"
+              action="service_dashboard_action"/>
+</odoo>
+
+
+
+
+
