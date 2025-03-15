@@ -3,7 +3,7 @@
 {
     'name': "Odoo Owl Services",
     'version': '17.0.1.0.0',
-    'depends': ['sale_management'],
+    'depends': ['sale_management','base','web'],
     'author': "",
     'description': """
     Module Structure

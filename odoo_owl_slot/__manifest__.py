@@ -3,7 +3,7 @@
 {
     'name': "Owl Slot",
     'version': '17.0.1.0.0',
-    'depends': [],
+    'depends': ['base','web'],
     'author': "",
     'description': """
     Owl Slot
